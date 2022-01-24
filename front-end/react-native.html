@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.35">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>ReactNative开发 | 学习记录</title><meta name="description" content="">
+    <link rel="modulepreload" href="/blog/assets/app.0575061e.js"><link rel="modulepreload" href="/blog/assets/react-native.html.84c324b0.js"><link rel="modulepreload" href="/blog/assets/react-native.html.115f7e3c.js"><link rel="modulepreload" href="/blog/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="stylesheet" href="/blog/assets/style.7e38007d.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header ref_key="navbar" class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/blog/" class=""><!----><span class="site-name">学习记录</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><nav class="navbar-items can-hide"><!--[--><div class="navbar-item"><a href="/blog/" class="" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/caigouzi1/blog" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><nav class="navbar-items"><!--[--><div class="navbar-item"><a href="/blog/" class="" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-item"><a class="external-link" href="https://github.com/caigouzi1/blog" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading">ReactNative开发 <!----></p><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/blog/front-end/react-native.html#网络文档" class="router-link-active router-link-exact-active sidebar-item" aria-label="网络文档"><!--[--><!--]--> 网络文档 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#第三方组件" class="router-link-active router-link-exact-active sidebar-item" aria-label="第三方组件"><!--[--><!--]--> 第三方组件 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#webview" class="router-link-active router-link-exact-active sidebar-item" aria-label="WebView"><!--[--><!--]--> WebView <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#安卓键盘遮挡" class="router-link-active router-link-exact-active sidebar-item" aria-label="安卓键盘遮挡"><!--[--><!--]--> 安卓键盘遮挡 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#支付宝转账" class="router-link-active router-link-exact-active sidebar-item" aria-label="支付宝转账"><!--[--><!--]--> 支付宝转账 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#模拟器连接开发" class="router-link-active router-link-exact-active sidebar-item" aria-label="模拟器连接开发"><!--[--><!--]--> 模拟器连接开发 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#react-navigation生命周期" class="router-link-active router-link-exact-active sidebar-item" aria-label="react-navigation生命周期"><!--[--><!--]--> react-navigation生命周期 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#图片选择器无法获取图片" class="router-link-active router-link-exact-active sidebar-item" aria-label="图片选择器无法获取图片"><!--[--><!--]--> 图片选择器无法获取图片 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#图片无法上传" class="router-link-active router-link-exact-active sidebar-item" aria-label="图片无法上传"><!--[--><!--]--> 图片无法上传 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/blog/front-end/react-native.html#卸载组件" class="router-link-active router-link-exact-active sidebar-item" aria-label="卸载组件"><!--[--><!--]--> 卸载组件 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="reactnative开发" tabindex="-1"><a class="header-anchor" href="#reactnative开发" aria-hidden="true">#</a> ReactNative开发</h1><ul><li><h3 id="网络文档" tabindex="-1"><a class="header-anchor" href="#网络文档" aria-hidden="true">#</a> 网络文档</h3></li></ul><ol><li><a href="https://juejin.im/post/5dc3c36ef265da4d0c175624" target="_blank" rel="noopener noreferrer">ReactNativeWeb与RN项目整合<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li><li><a href="https://www.jianshu.com/p/29c54ecbba28" target="_blank" rel="noopener noreferrer">React Native 根据WebView内容自动设置高度<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li><li><a href="https://www.jianshu.com/p/a3f65af6de7b" target="_blank" rel="noopener noreferrer">react-native-debugger中查看网络请求<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li><li><a href="https://blog.csdn.net/u011045726/article/details/76064048" target="_blank" rel="noopener noreferrer">Android7.0 和 Charles的抓包<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li><li><a href="https://shenbao.github.io/ishehui/html/RN%20%E5%9F%BA%E7%A1%80/React%20Native%20%E6%A0%B7%E5%BC%8F%E8%A1%A8%E6%8C%87%E5%8D%97.html" target="_blank" rel="noopener noreferrer">react native 常用样式<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li><li><a href="https://www.injdk.cn/" target="_blank" rel="noopener noreferrer">jdk8 下载<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li><li><a href="https://www.androiddevtools.cn/index.html/" target="_blank" rel="noopener noreferrer">安卓资源下载<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li></ol><ul><li><h3 id="第三方组件" tabindex="-1"><a class="header-anchor" href="#第三方组件" aria-hidden="true">#</a> 第三方组件</h3></li></ul><ol><li><a href="https://www.npmjs.com/package/@voximplant/react-native-foreground-service" target="_blank" rel="noopener noreferrer">@voximplant/react-native-foreground-service<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></li><li><a href="react-native-shortcutmanager">图标长按操作</a> - 相关关键词Shortcut</li></ol><ul><li><h3 id="webview" tabindex="-1"><a class="header-anchor" href="#webview" aria-hidden="true">#</a> WebView</h3></li></ul><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>import React, {PureComponent} from &#39;react&#39;;
+import WebView from &#39;react-native-webview&#39;;
+import {StackActions} from &#39;@react-navigation/native&#39;;
+import * as WeChat from &#39;react-native-wechat&#39;;
+import {navigationRef} from &#39;../utils/helper&#39;;
+
+interface WebWrapperProps {
+  url: string;
+}
+interface NativeMessage {
+  uuid: string;
+  action: &#39;fetchToken&#39; | &#39;wxAuth&#39; | &#39;share&#39; | &#39;push&#39; | &#39;back&#39;;
+  params: any;
+}
+
+export default class WebWrapper extends PureComponent&lt;WebWrapperProps&gt; {
+  instance?: WebView;
+
+  async handleMessage(e: string) {
+    const msg: NativeMessage = JSON.parse(e);
+    if (msg.uuid) {
+      switch (msg.action) {
+        case &#39;fetchToken&#39;:
+          this.inject(msg.uuid, {xToken: &#39;xToken&#39;});
+          break;
+        case &#39;wxAuth&#39;:
+          try {
+            const res = await WeChat.sendAuthRequest(&#39;snsapi_userinfo&#39;, &#39;lh&#39;);
+            this.inject(msg.uuid, res);
+          } catch (error) {
+            this.inject(msg.uuid, error, true);
+          }
+          break;
+        case &#39;share&#39;:
+          try {
+            if (msg.params &amp;&amp; msg.params.scene === &#39;session&#39;) {
+              const res = await WeChat.shareToSession(msg.params);
+              this.inject(msg.uuid, res);
+            }
+            if (msg.params &amp;&amp; msg.params.scene === &#39;timeline&#39;) {
+              const res = await WeChat.shareToTimeline(msg.params);
+              this.inject(msg.uuid, res);
+            }
+          } catch (error) {
+            this.inject(msg.uuid, error, true);
+          }
+          break;
+        case &#39;push&#39;:
+          if (msg.params.url) {
+            if (navigationRef.current) {
+              const pushAction = StackActions.push(&#39;Display&#39;, msg.params);
+              navigationRef.current.dispatch(pushAction);
+            }
+          }
+          this.inject(msg.uuid);
+          break;
+        case &#39;back&#39;:
+          if (navigationRef.current) {
+            if (navigationRef.current.canGoBack()) {
+              navigationRef.current.goBack();
+            }
+          }
+          this.inject(msg.uuid);
+          break;
+      }
+    }
+  }
+
+  inject(uuid: string, payload: any = {}, isError: boolean = false) {
+    if (this.instance) {
+      const payloadData: string = JSON.stringify(payload);
+      const isErrorData: string = isError ? &#39;true&#39; : &#39;false&#39;;
+      this.instance.injectJavaScript(`
+        if(window.nativeCallback) {
+          window.nativeCallback(&#39;${uuid}&#39;, ${payloadData}, ${isErrorData});
+        }
+      `);
+    }
+  }
+
+  render() {
+    return (
+      &lt;WebView
+        ref={(r) =&gt; {
+          if (r) {
+            this.instance = r;
+          }
+        }}
+        startInLoadingState
+        source={{uri: this.props.url}}
+        onMessage={(e) =&gt; this.handleMessage(e.nativeEvent.data)}
+      /&gt;
+    );
+  }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br></div></div><ul><li><h3 id="安卓键盘遮挡" tabindex="-1"><a class="header-anchor" href="#安卓键盘遮挡" aria-hidden="true">#</a> 安卓键盘遮挡</h3><p>1.修改AndroidManifest.xml 中的activity</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>    android:windowSoftInputMode=&quot;adjustPan&quot;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>2.使用KeyboardAvoidingView组件</p><div class="language-javascript ext-js line-numbers-mode"><pre class="language-javascript"><code>      <span class="token comment">// 使用ScrollView包裹当失去焦点是会自动收起键盘</span>
+      <span class="token operator">&lt;</span>ScrollView contentContainerStyle<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>KeyboardAvoidingView behavior<span class="token operator">=</span><span class="token string">&quot;height&quot;</span> style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>logo<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>View style<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>formBox<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>Input
+            placeholder<span class="token operator">=</span><span class="token string">&quot;登陆手机号&quot;</span>
+            leftIcon<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>Icon name<span class="token operator">=</span><span class="token string">&quot;user&quot;</span> size<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">24</span><span class="token punctuation">}</span> color<span class="token operator">=</span><span class="token string">&quot;black&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">}</span>
+            onChangeText<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">phone</span><span class="token operator">:</span> value<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>KeyboardAvoidingView<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ScrollView<span class="token operator">&gt;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></li><li><h3 id="支付宝转账" tabindex="-1"><a class="header-anchor" href="#支付宝转账" aria-hidden="true">#</a> 支付宝转账</h3><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>  const url =
+      &#39;alipayqr://platformapi/startapp?saId=10000007&amp;qrcode=https://qr.alipay.com/fkx12485r1525kbnh21uwfd&#39;;
+    Modal.alert(&#39;支付宝转账&#39;, &#39;支付宝转账开通外卖功能&#39;, [
+      {
+        text: &#39;取消&#39;,
+        style: &#39;cancel&#39;,
+      },
+      {
+        text: &#39;支付宝转账&#39;,
+        onPress: () =&gt; {
+          Linking.canOpenURL(url)
+            .then((supported) =&gt; {
+              if (!supported) {
+                // if (this.qq) {
+                //   Clipboard.setString(this.qq);
+                //   Toast.info(&#39;打开QQ失败，客服QQ号已复制到粘贴板&#39;);
+                // }
+              } else {
+                return Linking.openURL(url);
+              }
+            })
+            .catch((error) =&gt; console.log(&#39;tel error&#39;, error));
+        },
+      },
+    ]);
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div></li><li><h3 id="模拟器连接开发" tabindex="-1"><a class="header-anchor" href="#模拟器连接开发" aria-hidden="true">#</a> 模拟器连接开发</h3><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>  adb connect 127.0.0.1:62001 (夜神模拟器)
+  adb connect 127.0.0.1:6555  (天天模拟器)
+  adb shell input keyevent 82 (debug菜单)   
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li><li><h3 id="react-navigation生命周期" tabindex="-1"><a class="header-anchor" href="#react-navigation生命周期" aria-hidden="true">#</a> react-navigation生命周期</h3><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>   &lt;NavigationEvents onDidFocus={() =&gt; this.refreshData()} /&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li><li><h3 id="图片选择器无法获取图片" tabindex="-1"><a class="header-anchor" href="#图片选择器无法获取图片" aria-hidden="true">#</a> 图片选择器无法获取图片</h3><p>https://github.com/react-native-community/react-native-image-picker/issues/1259 需要额外添加权限</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>  &lt;application
+      ...
+  android:requestLegacyExternalStorage=&quot;true&quot;&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li><li><h3 id="图片无法上传" tabindex="-1"><a class="header-anchor" href="#图片无法上传" aria-hidden="true">#</a> 图片无法上传</h3><ul><li>https://github.com/facebook/react-native/issues/28551</li><li>https://github.com/react-native-community/react-native-image-picker/issues/1344</li></ul></li><li><h3 id="卸载组件" tabindex="-1"><a class="header-anchor" href="#卸载组件" aria-hidden="true">#</a> 卸载组件</h3><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>  react-native unlink xxx
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li></ul><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">更新时间: </span><!----></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/blog/assets/app.0575061e.js" defer></script>
+  </body>
+</html>
