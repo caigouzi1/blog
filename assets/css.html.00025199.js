@@ -1,1 +1,0 @@
-const e={key:"v-2a9c0172",path:"/front-end/css.html",title:"Css\u5E38\u89C1\u95EE\u9898\u89E3\u51B3",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u4F2A\u7C7B\u5143\u7D20\u6362\u884C",slug:"\u4F2A\u7C7B\u5143\u7D20\u6362\u884C",children:[]}],git:{updatedTime:1643350918e3},filePathRelative:"front-end/css.md"};export{e as data};

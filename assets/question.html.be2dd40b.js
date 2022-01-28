@@ -1,0 +1,1 @@
+const e={key:"v-732c80c2",path:"/front-end/question.html",title:"\u5E38\u89C1\u95EE\u9898\u89E3\u51B3\u65B9\u6848",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"element-ui",slug:"element-ui",children:[]}],git:{updatedTime:1643350763e3},filePathRelative:"front-end/question.md"};export{e as data};

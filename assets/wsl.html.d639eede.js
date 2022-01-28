@@ -1,0 +1,1 @@
+const e={key:"v-2a7791d9",path:"/manual/wsl.html",title:"WSL\u5F00\u53D1",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u76F8\u5173\u535A\u5BA2",slug:"\u76F8\u5173\u535A\u5BA2",children:[]},{level:3,title:"VsCode\u7684\u4F7F\u7528",slug:"vscode\u7684\u4F7F\u7528",children:[]}],git:{updatedTime:1643350763e3},filePathRelative:"manual/wsl.md"};export{e as data};

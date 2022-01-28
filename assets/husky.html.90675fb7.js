@@ -1,0 +1,1 @@
+const t={key:"v-63801f16",path:"/manual/husky.html",title:"husky + lint-staged \u89C4\u8303 git \u4EE3\u7801\u9012\u4EA4",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"package.json \u6DFB\u52A0 script",slug:"package-json-\u6DFB\u52A0-script",children:[]}],git:{updatedTime:1643350763e3},filePathRelative:"manual/husky.md"};export{t as data};
