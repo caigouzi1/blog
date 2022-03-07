@@ -1,1 +1,0 @@
-const e={key:"v-35217e60",path:"/linux/debian.html",title:"debian\u5E38\u7528\u547D\u4EE4",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u4FEE\u6539\u6587\u4EF6\u955C\u50CF\u6E90",slug:"\u4FEE\u6539\u6587\u4EF6\u955C\u50CF\u6E90",children:[]}],git:{updatedTime:1645184402e3},filePathRelative:"linux/debian.md"};export{e as data};
