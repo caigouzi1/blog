@@ -23,7 +23,7 @@
 			}
     </script>
     <title>Git 使用 | 工作学习记录</title><meta name="description" content="">
-    <link rel="modulepreload" href="/blog/assets/app.31e3b25e.js"><link rel="modulepreload" href="/blog/assets/git.html.09038cf3.js"><link rel="modulepreload" href="/blog/assets/git.html.509bb71d.js"><link rel="modulepreload" href="/blog/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="modulepreload" href="/blog/assets/app.cf2a18c1.js"><link rel="modulepreload" href="/blog/assets/git.html.44aef19f.js"><link rel="modulepreload" href="/blog/assets/git.html.8e8445f0.js"><link rel="modulepreload" href="/blog/assets/plugin-vue_export-helper.21dcd24c.js">
     <link rel="stylesheet" href="/blog/assets/style.7e38007d.css">
   </head>
   <body>
@@ -89,7 +89,9 @@
 
 <span class="token comment"># 删除远程分支</span>
 <span class="token function">git</span> push <span class="token operator">&lt;</span>remote<span class="token operator">&gt;</span> --delete <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="git-推送-push" tabindex="-1"><a class="header-anchor" href="#git-推送-push" aria-hidden="true">#</a> Git 推送（push）</h2><blockquote><p>格式 : git push &lt;远程主机名&gt; &lt;本地分支名&gt; &lt;远程分支名&gt;</p></blockquote><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 如果远程分支被省略，如上则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建</span>
+如：
+<span class="token function">git</span> push origin --delete dev  
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="git-推送-push" tabindex="-1"><a class="header-anchor" href="#git-推送-push" aria-hidden="true">#</a> Git 推送（push）</h2><blockquote><p>格式 : git push &lt;远程主机名&gt; &lt;本地分支名&gt; &lt;远程分支名&gt;</p></blockquote><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 如果远程分支被省略，如上则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建</span>
 <span class="token function">git</span> push origin master
 
 <span class="token comment"># 如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支，等同于 git push origin --delete master</span>
@@ -111,6 +113,6 @@
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li><li><p>把分支的代码 merge 到主分支:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">git</span> merge dev
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li><li><p>git push 推上去:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">git</span> push
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li></ol><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">更新时间: </span><!----></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
-    <script type="module" src="/blog/assets/app.31e3b25e.js" defer></script>
+    <script type="module" src="/blog/assets/app.cf2a18c1.js" defer></script>
   </body>
 </html>
