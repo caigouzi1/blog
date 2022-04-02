@@ -1,1 +1,0 @@
-const e={key:"v-22f514a3",path:"/linux/node.html",title:"Node\u540E\u53F0\u5E38\u9A7B\u8FD0\u884C",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u60C5\u5883",slug:"\u60C5\u5883",children:[]},{level:3,title:"\u89E3\u51B3\u65B9\u6CD5",slug:"\u89E3\u51B3\u65B9\u6CD5",children:[]}],git:{updatedTime:1647229715e3},filePathRelative:"linux/node.md"};export{e as data};
