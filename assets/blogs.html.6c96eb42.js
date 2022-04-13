@@ -1,0 +1,1 @@
+const e={key:"v-60c4ae78",path:"/manual/blogs.html",title:"\u5B9E\u7528\u535A\u5BA2",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{createdTime:1649816453e3,updatedTime:1649816453e3,contributors:[{name:"qyc",email:"759160301@qq.com",commits:1}]},readingTime:{minutes:.23,words:70},filePathRelative:"manual/blogs.md"};export{e as data};
