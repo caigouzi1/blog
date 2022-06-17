@@ -1,1 +1,0 @@
-const e={key:"v-28454e54",path:"/tag/code/",title:"code \u6807\u7B7E",lang:"zh-CN",frontmatter:{title:"code \u6807\u7B7E",blog:{type:"category",name:"code",key:"tag"},layout:"Blog"},excerpt:"",headers:[],git:{},readingTime:{minutes:0,words:0},filePathRelative:null};export{e as data};
