@@ -1,0 +1,32 @@
+import{_ as c}from"./plugin-vue_export-helper.21dcd24c.js";import{r as l,o,c as t,a as n,b as e,e as s,d as i}from"./app.cd28772a.js";const r={},d=n("h1",{id:"macos-\u7CFB\u7EDF\u4E0B\u642D\u5EFAreactnative\u73AF\u5883",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#macos-\u7CFB\u7EDF\u4E0B\u642D\u5EFAreactnative\u73AF\u5883","aria-hidden":"true"},"#"),s(" MacOs \u7CFB\u7EDF\u4E0B\u642D\u5EFAReactNative\u73AF\u5883")],-1),u=n("h2",{id:"_1-xcode\u5B89\u88C5",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#_1-xcode\u5B89\u88C5","aria-hidden":"true"},"#"),s(" 1. Xcode\u5B89\u88C5")],-1),p=s("Xcode\u7248\u672C\u9700\u548CMacOS\u7248\u672C\u5339\u914D\uFF0C\u5BF9\u5E94\u5173\u7CFB\u53CA\u4E0B\u8F7D\u5730\u5740"),m={href:"https://uovol.com/macos-xcode-version",target:"_blank",rel:"noopener noreferrer"},v=s("\u53C2\u8003"),b=i(`<h2 id="_2-\u5B89\u88C5watchman" tabindex="-1"><a class="header-anchor" href="#_2-\u5B89\u88C5watchman" aria-hidden="true">#</a> 2. \u5B89\u88C5watchman</h2><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># Homebrew\u8BBE\u7F6E\u56FD\u5185\u955C\u50CF\u6E90</span>
+/bin/zsh -c <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh<span class="token variable">)</span></span>&quot;</span>
+
+brew <span class="token function">install</span> watchman
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>\u5982\u9047\u7F51\u7EDC\u539F\u56E0\u53EF\u7528\u4EE5\u4E0B\u65B9\u5F0F\u5B89\u88C5</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">unzip</span> watchman-*-linux.zip
+<span class="token builtin class-name">cd</span> watchman-vYYYY.MM.DD.00-linux
+<span class="token function">sudo</span> <span class="token function">mkdir</span> -p /usr/local/<span class="token punctuation">{</span>bin,lib<span class="token punctuation">}</span> /usr/local/var/run/watchman
+<span class="token function">sudo</span> <span class="token function">cp</span> bin/* /usr/local/bin
+<span class="token function">sudo</span> <span class="token function">cp</span> lib/* /usr/local/lib
+<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">755</span> /usr/local/bin/watchman
+<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">2777</span> /usr/local/var/run/watchman
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,4),h={href:"https://zhuanlan.zhihu.com/p/111014448",target:"_blank",rel:"noopener noreferrer"},k=s("Homebrew\u56FD\u5185\u955C\u50CF\u6E90\u6587\u6863\u53C2\u8003"),_=i(`<h2 id="_3-cocoapods\u5B89\u88C5" tabindex="-1"><a class="header-anchor" href="#_3-cocoapods\u5B89\u88C5" aria-hidden="true">#</a> 3. CocoaPods\u5B89\u88C5</h2><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>brew <span class="token function">install</span> cocoapods
+<span class="token comment"># \u6216</span>
+<span class="token function">sudo</span> gem <span class="token function">install</span> cocoapods
+
+pod --version
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>\u5982Ruby\u7248\u672C\u4F4E\u5219\u9700\u8981\u4F7F\u7528rvm\u66F4\u65B0\u7248\u672C</p><p>\u5B89\u88C5rvm\u6B65\u9AA4\u5982\u4E0B</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">curl</span> -L get.rvm.io <span class="token operator">|</span> <span class="token function">bash</span> -s stable
+
+<span class="token builtin class-name">source</span> ~/.bashrc
+
+<span class="token builtin class-name">source</span> ~/.bash_profile
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>rvm\u4F7F\u7528</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># \u67E5\u770Brvm\u7248\u672C</span>
+rvm -v
+
+<span class="token comment"># \u5217\u51FAruby\u53EF\u5B89\u88C5\u7684\u7248\u672C\u4FE1\u606F</span>
+rvm list known
+
+<span class="token comment"># \u4E0B\u8F7D\u5BF9\u5E94\u7248\u672C</span>
+rvm <span class="token function">install</span> <span class="token number">2.7</span>.0
+<span class="token comment"># \u8BBE\u7F6E\u9ED8\u8BA4\u7248\u672C</span>
+rvm use <span class="token number">2.7</span>.0 --default
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></blockquote><h2 id="_4-\u8FD0\u884C" tabindex="-1"><a class="header-anchor" href="#_4-\u8FD0\u884C" aria-hidden="true">#</a> 4. \u8FD0\u884C</h2><p>\u8FD0\u884C\u65F6\u9700\u6CE8\u610F pods \u4E2D Deployment Target\u4E2DIOS\u7248\u672C\u4E0E Podfile \u4E2D\u4FDD\u6301\u4E00\u81F4</p><h2 id="_5-ios\u6253\u5305" tabindex="-1"><a class="header-anchor" href="#_5-ios\u6253\u5305" aria-hidden="true">#</a> 5. IOS\u6253\u5305</h2>`,6),f={href:"https://blog.csdn.net/lizujun123/article/details/103937668",target:"_blank",rel:"noopener noreferrer"},g=s("\u53C2\u8003");function x(w,z){const a=l("ExternalLinkIcon");return o(),t("div",null,[d,u,n("p",null,[p,n("a",m,[v,e(a)])]),b,n("p",null,[n("a",h,[k,e(a)])]),_,n("p",null,[n("a",f,[g,e(a)])])])}var q=c(r,[["render",x],["__file","mac-rn.html.vue"]]);export{q as default};
