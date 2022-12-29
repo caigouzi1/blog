@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-1a8900ba","path":"/tag/nginx/","title":"nginx 标签","lang":"zh-CN","frontmatter":{"title":"nginx 标签","blog":{"type":"category","name":"nginx","key":"tag"},"layout":"Blog"},"excerpt":"","headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{t as data};

@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-b308adf6","path":"/tag/php/","title":"php 标签","lang":"zh-CN","frontmatter":{"title":"php 标签","blog":{"type":"category","name":"php","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{t as data};
