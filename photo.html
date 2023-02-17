@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <!-- <script src="js/jquery-3.5.1.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>图片滤镜特效试验</title>
+    <style type="text/css">
+        @-webkit-keyframes testAnim {
+            0% {
+                -webkit-filter: grayscale(0.5) blur(1px) saturate(2);
+            }
+
+            100% {
+                -webkit-filter: grayscale(0.2) blur(6px) saturate(9);
+            }
+        }
+
+        /*IE,FF暂不支持*/
+        @-moz-keyframes testAnim {
+            0% {
+                -moz-filter: grayscale(0.5) blur(1px) saturate(2);
+            }
+
+            100% {
+                -moz-filter: grayscale(0.2) blur(6px) saturate(9);
+            }
+        }
+
+        @-ms-keyframes testAnim {
+            0% {
+                -ms-filter: grayscale(0.5) blur(1px) saturate(2);
+            }
+
+            100% {
+                -ms-filter: grayscale(0.2) blur(6px) saturate(9);
+            }
+        }
+
+        @keyframes testAnim {
+            0% {
+                filter: grayscale(0.5) blur(1px) saturate(2);
+            }
+
+            100% {
+                filter: grayscale(0.2) blur(6px) saturate(9);
+            }
+        }
+
+        #animatePhoto {}
+
+        .animatePhoto:hover,
+        #animatePhoto:hover {
+            -webkit-animation-name: testAnim;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-timing-function: ease-out;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-delay: 0s;
+
+            /*IE,FF暂不支持*/
+            -moz-animation-name: testAnim;
+            -moz-animation-duration: 2s;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-direction: alternate;
+            -moz-animation-timing-function: ease-out;
+            -moz-animation-fill-mode: forwards;
+            -moz-animation-delay: 0s;
+
+            -ms-animation-name: testAnim;
+            -ms-animation-duration: 2s;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-direction: alternate;
+            -ms-animation-timing-function: ease-out;
+            -ms-animation-fill-mode: forwards;
+            -ms-animation-delay: 0s;
+
+            animation-name: testAnim;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
+        }
+
+        .l,
+        .r {
+            width: 80%;
+            float: left;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="l">
+        <h3>图片滤镜特效试验</h3>
+        <div style="display: flex;flex-direction: row;align-items: center;margin-bottom:20px;">
+            <button onclick="photoFile()" style="margin-right: 10px;">拍照上传</button>
+            <button onclick="downloadFile()">下载</button>
+        </div>
+        <!-- <input type="file" id="file1" accept="image/*" capture="camera" onchange="xmTanUploadImg(this)" style="display: none;"/> -->
+        <input type="file" id="file1" accept="image/*" onchange="xmTanUploadImg(this)" style="display: none;" />
+        <!-- accept="image/*;capture=camera" 直接调用相机
+		accept="image/*" 调用相机 图片或者相册 -->
+
+
+        <img id="fxPhoto"
+            src="https://img2.baidu.com/it/u=4208731535,3086181853&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=334"
+            style="width: 100%;mode:widthFix;height:0" />
+
+
+        <canvas id="canvas" style="width: 100%;mode:widthFix;"></canvas>
+
+        <div id="sliderContainer">
+
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(() => {
+                renderCanvas()
+            }, 500);
+        }
+        var photo = document.querySelector("#fxPhoto");
+        var fileName = 'img'
+        var filters = [
+            { name: "grayscale", cname: "黑白照片(灰度级)效果", def: "0", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "blur", cname: "模糊效果", def: "0", unit: "px", min: 0, max: 10, step: "1" },
+            { name: "sepia", cname: "老照片(褐黄色)效果", def: "0", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "saturate", cname: "饱和度调整", def: "1", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "opacity", cname: "透明度调整", def: "1", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "brightness", cname: "亮度调整", def: "1", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "contrast", cname: "对比度调整", def: "1", unit: "", min: 0, max: 1, step: "0.01" },
+            { name: "hue-rotate", cname: "色调调整", def: "0", unit: "deg", min: 0, max: 360, step: "1" },
+            { name: "invert", cname: "色彩反相", def: "0", unit: "", min: 0, max: 1.0, step: "0.01" }
+        ];
+
+        var filtersOld = [
+            { name: "grayscale", cname: "黑白照片(灰度级)效果", def: "0", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "blur", cname: "模糊效果", def: "0", unit: "px", min: 0, max: 10, step: "1" },
+            { name: "sepia", cname: "老照片(褐黄色)效果", def: "0", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "saturate", cname: "饱和度调整", def: "1", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "opacity", cname: "透明度调整", def: "1", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "brightness", cname: "亮度调整", def: "1", unit: "", min: 0, max: 1.0, step: "0.01" },
+            { name: "contrast", cname: "对比度调整", def: "1", unit: "", min: 0, max: 1, step: "0.01" },
+            { name: "hue-rotate", cname: "色调调整", def: "0", unit: "deg", min: 0, max: 360, step: "1" },
+            { name: "invert", cname: "色彩反相", def: "0", unit: "", min: 0, max: 1.0, step: "0.01" }
+        ];
+
+        function renderCanvas() {
+            var imgSrc = document.getElementById('fxPhoto').getAttribute('src')
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var image = new Image();
+            image.setAttribute("crossOrigin", 'Anonymous')
+            image.src = imgSrc;
+            var filterStr = ''
+            image.onload = function () {
+                canvas.width = image.width
+                canvas.height = image.height
+                filters.forEach(function (n, i) {
+                    var value = document.querySelector('#' + n.name).value;
+                    filterStr += (n.name + "(" + value + n.unit + ") ")
+                })
+                ctx.filter = filterStr
+                ctx.drawImage(image, 0, 0);
+            }
+        }
+
+        // Change event
+        function onChange() {
+            var cssString = "";
+
+            filters.forEach(function (n, i) {
+                var value = document.querySelector('#' + n.name).value;
+                // Update the value title
+                document.querySelector('#title_' + n.name).innerHTML = "<lable>" + n.cname + "(" + n.name + ":" + value + n.unit + ")</lable>";
+
+                // Update CSS string
+                cssString += " " + n.name + "(" + value + n.unit + ")";
+            });
+            photo.style["-webkit-filter"] = cssString;
+            renderCanvas()
+        }
+        HTMLElement.prototype.appendHTML = function (html) {
+            var divTemp = document.createElement("div"), nodes = null
+                // 文档片段，一次性append，提高性能
+                , fragment = document.createDocumentFragment();
+            divTemp.innerHTML = html;
+            nodes = divTemp.childNodes;
+            for (var i = 0, length = nodes.length; i < length; i += 1) {
+                fragment.appendChild(nodes[i].cloneNode(true));
+            }
+            this.appendChild(fragment);
+            // 据说下面这样子世界会更清净
+            nodes = null;
+            fragment = null;
+        };
+        // For every filter
+        var container = document.querySelector("#sliderContainer");
+
+        filters.forEach(function (n) {
+            container.appendHTML("<p id='title_" + n.name + "'>" + n.cname + "</p>");
+            container.appendHTML("<input onChange='onChange()' value='" + n.def + "' type='range' id='" + n.name + "' min='" + n.min + "' max='" + n.max + "' step='" + n.step + "' style='width:100%'>");
+        });
+
+
+
+        var file = document.querySelector('input');
+        if (getIos()) {
+            file.removeAttribute("capture");
+        }
+        function getIos() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/iPhone\sOS/i) == "iphone os") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function photoFile() {
+            $("#file1").click();
+        }
+
+        function downloadFile() {
+            var newImg = document.getElementById('fxPhoto').getAttribute('src')
+            var canvas = document.getElementById('canvas')
+            var url = canvas.toDataURL('image/png', 1);
+            if (url) {
+                var alink = document.createElement("a");
+                alink.href = url;
+                var targetFilename = fileName.substring(0, fileName.lastIndexOf('.'));
+                alink.download = targetFilename; //fileName保存提示中用作预先填写的文件名
+                document.body.appendChild(alink);
+                alink.click();
+            }
+        }
+
+        function downloadFile1() {
+            var newImg = document.getElementById('fxPhoto').getAttribute('src')
+            if (newImg) {
+                var alink = document.createElement("a");
+                alink.href = newImg;
+                var filename = newImg.substring(newImg.lastIndexOf("/") + 1, newImg.length);
+                alink.download = filename; //fileName保存提示中用作预先填写的文件名
+                document.body.appendChild(alink);
+                alink.click();
+            }
+        }
+        function xmTanUploadImg(obj) {
+            var file = obj.files[0];
+            if (file.name) {
+                fileName = file.name
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {    //成功读取文件
+                var img = document.getElementById("fxPhoto");
+                img.src = e.target.result;
+                setTimeout(() => {
+                    renderCanvas()
+                }, 300);
+            };
+
+            //更改图片后重新设定滤镜值
+            $("#sliderContainer").html("");
+            var container = document.querySelector("#sliderContainer");
+            filtersOld.forEach(function (n) {
+                console.log(n.name)
+                container.appendHTML("<p id='title_" + n.name + "'>" + n.cname + "</p>");
+                container.appendHTML("<input onChange='onChange()' value='" + n.def + "' type='range' id='" + n.name + "' min='" + n.min + "' max='" + n.max + "' step='" + n.step + "' style='width:100%'>");
+            });
+            onChange();
+        }
+    </script>
+</body>
+
+</html>
