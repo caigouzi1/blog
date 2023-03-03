@@ -1,0 +1,1 @@
+import{_ as t,P as a,Q as c,S as e,a4 as r}from"./framework-ddfe6bc1.js";const s={},o=e("h1",{id:"vue相关内容",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#vue相关内容","aria-hidden":"true"},"#"),r(" VUE相关内容")],-1),n=[o];function _(d,i){return a(),c("div",null,n)}const l=t(s,[["render",_],["__file","vue.html.vue"]]);export{l as default};
