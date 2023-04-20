@@ -1,0 +1,1 @@
+import{_ as t,X as a,Y as c,Z as e,$ as r}from"./framework-d31b31ee.js";const s={},o=e("h1",{id:"vue相关内容",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#vue相关内容","aria-hidden":"true"},"#"),r(" VUE相关内容")],-1),n=[o];function _(d,i){return a(),c("div",null,n)}const l=t(s,[["render",_],["__file","vue.html.vue"]]);export{l as default};
