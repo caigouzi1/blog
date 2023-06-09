@@ -46,3 +46,7 @@ tag:
     }
   }
 ```
+
+## nginx相关网站
+
+- <https://xuexb.github.io/learn-nginx/>
