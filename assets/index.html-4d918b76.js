@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-5b099245","path":"/tag/%E5%A4%A7%E5%B1%8F/","title":"大屏 标签","lang":"zh-CN","frontmatter":{"title":"大屏 标签","index":false,"feed":false,"sitemap":false,"blog":{"type":"category","name":"大屏","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{e as data};

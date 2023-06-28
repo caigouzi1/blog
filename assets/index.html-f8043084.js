@@ -1,1 +1,0 @@
-const a=JSON.parse('{"key":"v-28a1d8bf","path":"/tag/java/","title":"Java 标签","lang":"zh-CN","frontmatter":{"title":"Java 标签","index":false,"feed":false,"sitemap":false,"blog":{"type":"category","name":"Java","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{a as data};
