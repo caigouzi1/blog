@@ -3,6 +3,7 @@ date: 2019-12-13
 category: 前端
 tag:
   - 积累
+star: true
 ---
 # 前端内容积累
 
@@ -19,6 +20,8 @@ tag:
 - CSSDeck ： [https://cssdeck.com](https://cssdeck.com)
 
 - LottieFiles: [https://lottiefiles.com/LottieFiles](https://lottiefiles.com/LottieFiles) 动画库
+
+- bootstrap模板集: [bootstrapmade](https://bootstrapmade.com/)
 
 ## React组件库
 
@@ -48,7 +51,7 @@ tag:
 
  > css特效
  >
- > [我写CSS的常用套路](<https://juejin.im/post/5e070cd9f265da33f8653f00>)
+ > [CSS的常用套路](<https://juejin.im/post/5e070cd9f265da33f8653f00>)
 
 ## npm实用库
 
