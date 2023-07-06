@@ -1,0 +1,13 @@
+server:
+  # 端口号
+  port: 8000
+  servlet:
+    # 接口统一前缀
+    context-path: "/"
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai"
+    username: "root"
+    password: "root"
+  resources:
+    static-locations: classpath:/META-INF/resources/, file:D:/test/, classpath:/resources/, classpath:/static/, classpath:/public/ classpath:templates/

@@ -4,6 +4,7 @@ import sidebar from './sidebar'
 import {getDirname, path} from '@vuepress/utils'
 const __dirname = getDirname(import.meta.url);
 
+
 export default hopeTheme({
   hostname: 'https://caigouzi1.github.io/blog/',
 
@@ -69,6 +70,10 @@ export default hopeTheme({
     pwa: {
       favicon: '/blog/logo.ico',
     },
+    git: {
+      updatedTime: true,
+      contributors: false
+    },
 
     // 评论插件配置
     comment: {
@@ -100,9 +105,7 @@ export default hopeTheme({
         },
       },
       include: true,
-      presentation: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
+      presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
     },
   },
 }, {custom: true})
