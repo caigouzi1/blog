@@ -203,3 +203,11 @@ git push origin master
    ```bash
    git push
    ```
+
+## git使用代理  
+
+```bash
+# 具体端口号需查看本机配置
+git config --global http.proxy http://127.0.0.1:7890
+git config --global --unset http.proxy
+```
