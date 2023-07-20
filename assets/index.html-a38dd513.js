@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-288085ef","path":"/tag/gulp/","title":"Gulp 标签","lang":"zh-CN","frontmatter":{"title":"Gulp 标签","dir":{"index":false},"feed":false,"sitemap":false,"blog":{"type":"category","name":"Gulp","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{e as data};
