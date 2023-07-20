@@ -11,3 +11,9 @@ spring:
     password: "root"
   resources:
     static-locations: classpath:/META-INF/resources/, file:D:/test/, classpath:/resources/, classpath:/static/, classpath:/public/ classpath:templates/
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
