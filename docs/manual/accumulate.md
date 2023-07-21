@@ -18,6 +18,7 @@ star: true
 - android应用架构分析工具: [libchecker](https://github.com/zhaobozhen/LibChecker)
 - ssh工具: [tabby](https://tabby.sh/)
 - github下载加速: [doget](https://doget.nocsdn.com/#/)、 [toolwa](http://toolwa.com/github)
+- Navicat: [NavicatCracker](https://gitee.com/shuhongfan/NavicatCracker)、 [NavicatCracker](https://gitee.com/zktww/navicat-cracker) 、[Navicat安装包及NavicatCracker](https://www.cnblogs.com/kkdaj/p/16260681.html)  
 
 ## 激活
 

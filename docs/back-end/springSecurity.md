@@ -37,9 +37,14 @@ public class SecurityConfig {
                 // 其他请求都需要校验登录状态
                 .anyRequest().authenticated()
         //  关闭csrf，否则用户未登录时无法发送post请求
-        ).csrf(AbstractHttpConfigurer::disable);
+        ).csrf(AbstractHttpConfigurer::disable).exceptionHandling(authorize -> authorize.authenticationEntryPoint(customAuthenticationEntryPoint()));
 
         return http.build();
+    }
+
+    @Bean
+    public AuthenticationEntryPoint customAuthenticationEntryPoint() {
+        return new CustomAuthenticationEntryPoint();
     }
 }
 ```
@@ -84,7 +89,7 @@ public class SpringSecurityUtil {
 
     public static boolean isLogin() {
         // 判断用户是否已登录
-        return !(SecurityContextHolder.getContext().getAuthentication() instanceof AnonymousAuthenticationToken);
+        return Objects.nonNull(SecurityContextHolder.getContext().getAuthentication()) && !(SecurityContextHolder.getContext().getAuthentication() instanceof AnonymousAuthenticationToken);
     }
 
 
@@ -94,6 +99,43 @@ public class SpringSecurityUtil {
         SecurityContextHolder.getContext().setAuthentication(null);
         // Session设置失效
         request.getSession().invalidate();
+    }
+}
+```
+
+## 鉴权相关错误信息自定义处理
+
+> 自定义AuthenticationEntryPoint实现报错页面自定义，[参考文档](https://docs.spring.io/spring-security/reference/servlet/authentication/preauth.html)
+
+```java
+import com.caigouzi1.webServer.model.vo.ResultVO;
+import com.caigouzi1.webServer.util.SpringSecurityUtil;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint {
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+        int statusCode = HttpStatus.FORBIDDEN.value();
+        ResultVO<Object> body = ResultVO.fail("用户权限不足");
+        if (!SpringSecurityUtil.isLogin()) {
+            statusCode = HttpStatus.UNAUTHORIZED.value();
+            body.setMessage("用户未登录");
+        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        response.setContentType("application/json;charset=UTF-8");
+        response.setStatus(statusCode);
+        PrintWriter out = response.getWriter();
+        out.write(objectMapper.writeValueAsString(body));
+        out.flush();
+        out.close();
     }
 }
 ```
