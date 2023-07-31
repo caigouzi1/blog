@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-50bbbf8f","path":"/nav.html","title":"导航","lang":"zh-CN","frontmatter":{"home":true,"layout":"BlogHome","icon":"blog","title":"导航"},"headers":[],"git":{"createdTime":1690793340000,"updatedTime":1690793340000},"readingTime":{"minutes":0.24,"words":72},"filePathRelative":"nav.md","localizedDate":"2023年7月31日"}');export{e as data};
