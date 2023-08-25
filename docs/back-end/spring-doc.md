@@ -33,3 +33,12 @@ spring:
 ```yaml
   <!-- @include: code/spring.yml -->
 ```
+
+## Spring Boot JAR包启动
+
+```bash
+ps -ef|grep java
+kill -9 进程ID
+
+nohup java -Xms512m -Xmx512m -jar /web/aurora-springboot-0.0.1.jar > /web/server.log 2>&1 &
+```

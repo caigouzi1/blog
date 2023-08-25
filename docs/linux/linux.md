@@ -11,16 +11,26 @@ tag:
 
 > [xshell](https://51.ruyo.net/test/download_xshell_xftp.html)
 
+## sudo命令带密码执行
+
+```sh
+# sudo -S 是一个用于在命令行中以交互方式输入密码的选项。当使用 sudo 命令时，它会要求您输入密码以验证您的身份。然而，通过添加 -S 选项，sudo 命令将从标准输入（stdin）中读取密码，而不是直接与终端交互。
+echo <password> | sudo -S <command>
+```
+
 ## 系统管理
 
 ```shell
+# 修改root账户的密码
+passwd root
+
 lsof -i :3306 //查看谁在占用该端口
 ps -axjf|grep 3306 //搜索相关进程
 ls -al /proc/3306 //查看进程详情
 nohup node index.js & //不挂断地运行命令，即使终端ssh关闭了也一直运行
 ```
 
-##  文件管理
+## 文件管理
 
 ```shell
 mkdir newfile  //创建文件夹
