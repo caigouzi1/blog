@@ -86,6 +86,7 @@ export default hopeTheme({
     },
     mdEnhance: {
       // enableAll: true,
+      mermaid: true,
       demo: true,  // 代码演示
       vuePlayground: true,  // Vue 交互演示
       playground: {
