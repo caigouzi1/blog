@@ -1,5 +1,5 @@
 ---
-date: 2023-09-01
+date: 2023-09-22
 category: 实践
 tag:
   - TuGraph
@@ -54,4 +54,21 @@ title: 操作流程图
 ---
 flowchart TB
 登录 --> 建模 --> 添加节点和边 --> 查看
+```
+
+## GQL(Graph Query Language)
+
+```gql
+
+<!-- *数字为不定长路径的语法 -->
+<!-- Zero-length paths -->
+MATCH (matrix:movie {title: 'The Matrix'})-[*0..1]-(x)
+RETURN x
+
+<!-- 从某一成品到所有原材料的节点路径 -->
+
+MATCH p = (成品 {id: '${this.finishedProduct}'})-[r*1..]->(原材料) RETURN p
+
+<!-- 分页 -->
+MATCH (n) RETURN n SKIP 10 LIMIT 10
 ```

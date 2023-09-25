@@ -14,11 +14,11 @@
   "homepage": "https://caigouzi1.github.io/blog",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.66",
-    "@vuepress/utils": "2.0.0-beta.66",
+    "@vuepress/client": "2.0.0-beta.67",
+    "@vuepress/utils": "2.0.0-beta.67",
     "vue": "^3.3.4",
-    "vuepress": "2.0.0-beta.66",
-    "vuepress-theme-hope": "2.0.0-beta.234",
+    "vuepress": "2.0.0-beta.67",
+    "vuepress-theme-hope": "2.0.0-beta.237",
     "webpack": "^5.88.2"
   }
 }
