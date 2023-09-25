@@ -30,7 +30,7 @@ jobs:
           cache: pnpm
 
       - name: Install Deps
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       # 生成静态文件
       - name: Build Blog
