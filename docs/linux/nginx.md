@@ -47,6 +47,20 @@ tag:
   }
 ```
 
+## proxy_pass代理时超时的问题(504 Gateway Time-out)
+
+```nginx
+http {
+  ...
+  proxy_connect_timeout 9000;
+  proxy_send_timeout 9000;
+  proxy_read_timeout 9000;
+  proxy_buffer_size 4k;
+  proxy_buffers 32 4k;
+  proxy_busy_buffers_size 64k;
+}
+```
+
 ## nginx相关网站
 
 - <https://xuexb.github.io/learn-nginx/>
