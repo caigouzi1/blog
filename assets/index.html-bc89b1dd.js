@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-8daa1a0e","path":"/","title":"笔记","lang":"zh-CN","frontmatter":{"lang":"zh-CN","article":false,"title":"笔记","layout":"BlogType"},"headers":[],"git":{"createdTime":1695619125000,"updatedTime":1695619125000},"readingTime":{"minutes":0.03,"words":10},"filePathRelative":"README.md","localizedDate":"2023年9月25日"}');export{e as data};
