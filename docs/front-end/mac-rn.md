@@ -3,6 +3,7 @@ date: 2022-07-28
 category: 前端
 tag:
   - ReactNative
+  - APP
 ---
 
 # MacOs 系统下搭建ReactNative环境
