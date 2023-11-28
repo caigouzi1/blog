@@ -116,4 +116,7 @@ sudo apt install nginx
     sh shutdown.sh
     ```
 
+1. 测试访问
+    通过访问 ip地址:8848/nacos 测试nacos部署是否成功
+
 ***[参考文档](https://nacos.io/zh-cn/docs/v2/quickstart/quick-start.html)***

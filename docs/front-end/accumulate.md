@@ -31,10 +31,11 @@ star: true
 ## React组件库
 
 1. [react-uwp](https://www.react-uwp.com/)：仿win10风的组件
-2. [Material-UI](<https://material-ui.com/>)
-3. [semantic-ui](<https://1.semantic-ui.com/>)
-4. [zeit-ui](<https://react.zeit-ui.co/zh-cn/components/text>)
-5. [geist-ui](<https://react.geist-ui.dev/zh-cn/components/text>)
+1. [Material-UI](<https://material-ui.com/>)
+1. [semantic-ui](<https://1.semantic-ui.com/>)
+1. [zeit-ui](<https://react.zeit-ui.co/zh-cn/components/text>)
+1. [geist-ui](<https://react.geist-ui.dev/zh-cn/components/text>)
+1. [Minimal](https://minimals.cc/components)： UI组件库
 
 ## Vue组件库
 
