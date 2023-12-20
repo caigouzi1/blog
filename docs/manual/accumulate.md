@@ -19,6 +19,7 @@ star: true
 - ssh工具: [tabby](https://tabby.sh/)
 - github下载加速: [doget](https://doget.nocsdn.com/#/)、 [toolwa](http://toolwa.com/github)
 - Navicat: [NavicatCracker](https://gitee.com/shuhongfan/NavicatCracker)、 [Navicat安装包及NavicatCracker](https://www.cnblogs.com/kkdaj/p/16260681.html)、[相关博客](https://www.cnblogs.com/kkdaj/p/16260681.html)  
+- 网页打包客户端工具: [Pake](https://github.com/tw93/Pake)
 
 ## 激活
 
