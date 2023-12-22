@@ -107,8 +107,8 @@ export default hopeTheme({
         },
       },
       include: true,
-      revealJS: {
-        themes: 'auto',
+      revealJs: {
+        themes: ['auto'],
         plugins: ['highlight', 'math', 'search', 'notes', 'zoom']
       },
       // presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
