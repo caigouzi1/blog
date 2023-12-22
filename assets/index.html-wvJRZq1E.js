@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3550c32c","path":"/tag/flask/","title":"标签: Flask","lang":"zh-CN","frontmatter":{"title":"标签: Flask","dir":{"index":false},"index":false,"feed":false,"sitemap":false,"blog":{"type":"category","name":"Flask","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{e as data};

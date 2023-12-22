@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-2d6f94ee","path":"/tag/husky/","title":"标签: husky","lang":"zh-CN","frontmatter":{"title":"标签: husky","dir":{"index":false},"feed":false,"sitemap":false,"blog":{"type":"category","name":"husky","key":"tag"},"layout":"BlogCategory"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null}');export{e as data};
