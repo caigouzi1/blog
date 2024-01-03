@@ -35,7 +35,11 @@ star: true
 1. [semantic-ui](<https://1.semantic-ui.com/>)
 1. [zeit-ui](<https://react.zeit-ui.co/zh-cn/components/text>)
 1. [geist-ui](<https://react.geist-ui.dev/zh-cn/components/text>)
+1. [shadcn/ui](https://ui.shadcn.com/docs)： UI组件
+1. [mantine](https://mantine.dev/getting-started/)： UI组件
+1. [daisyUI](https://daisyui.com/)： Tailwind UI组件
 1. [Minimal](https://minimals.cc/components)： UI组件库
+
 
 ## Vue组件库
 
