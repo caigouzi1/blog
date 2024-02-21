@@ -40,7 +40,6 @@ star: true
 1. [daisyUI](https://daisyui.com/)： Tailwind UI组件
 1. [Minimal](https://minimals.cc/components)： UI组件库
 
-
 ## Vue组件库
 
 1. [vuescroll](https://vuescrolljs.yvescoding.org/zh/guide/)：滚动条美化插件
