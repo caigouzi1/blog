@@ -57,7 +57,8 @@ export const webList: ICategary[] = [
     list: [
       { title: 'ChatGPT 镜像站', link: 'https://chat9.yqcloud.top/' },
       { title: 'ChatGPT 镜像站合集', link: 'https://cc.ai55.cc/' },
-      { title: 'Segment Anything图像分割' , link: 'https://github.com/facebookresearch/segment-anything'}
+      { title: 'Segment Anything图像分割' , link: 'https://github.com/facebookresearch/segment-anything'},
+      { title: '丑丑头像生成器' , link: 'https://txstc55.github.io/ugly-avatar/'},
     ],
   },
 ]
