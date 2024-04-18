@@ -1,0 +1,33 @@
+import{_ as t,r as o,o as i,c as d,a as e,b as n,d as a,e as r}from"./app-CbZyqyqy.js";const c={},l=r('<h1 id="使用nginx及docker部署code-server" tabindex="-1"><a class="header-anchor" href="#使用nginx及docker部署code-server"><span>使用nginx及Docker部署Code Server</span></a></h1><h2 id="docker启动code-server" tabindex="-1"><a class="header-anchor" href="#docker启动code-server"><span>Docker启动Code Server</span></a></h2><h3 id="创建目录挂载目录" tabindex="-1"><a class="header-anchor" href="#创建目录挂载目录"><span>创建目录挂载目录</span></a></h3><p>以挂在目录为test目录为例</p><h4 id="创建及配置config文件" tabindex="-1"><a class="header-anchor" href="#创建及配置config文件"><span>创建及配置config文件</span></a></h4>',5),p={href:"https://coder.com/docs/code-server/latest/FAQ#how-does-the-config-file-work",target:"_blank",rel:"noopener noreferrer"},v=r(`<div class="language-yaml line-numbers-mode" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token comment"># \\test\\.config\\code-server\\config.yaml</span>
+
+<span class="token key atrule">bind-addr</span><span class="token punctuation">:</span> 127.0.0.1<span class="token punctuation">:</span><span class="token number">8080</span>
+<span class="token key atrule">auth</span><span class="token punctuation">:</span> none
+<span class="token key atrule">cert</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>项目文件为地址为：\\test\\project</p></blockquote><h4 id="启动docker" tabindex="-1"><a class="header-anchor" href="#启动docker"><span>启动docker</span></a></h4>`,3),h={href:"https://coder.com/docs/code-server/latest/install",target:"_blank",rel:"noopener noreferrer"},u=r(`<div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--name</span> code-server <span class="token parameter variable">-p</span> <span class="token number">127.0</span>.0.1:8080:8080 <span class="token parameter variable">-auth</span> none <span class="token punctuation">\\</span>
+  <span class="token parameter variable">-v</span> &quot;/test:/home/coder/
+  codercom/code-server:latest
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote><p>code-server默认需要密码访问可通过配置config文件<code>auth: none</code>去除登录校验<br> 或者在启动命令时添加<code>-auth none</code></p></blockquote><h2 id="使用nginx代理-同时代理http和websocket请求" tabindex="-1"><a class="header-anchor" href="#使用nginx代理-同时代理http和websocket请求"><span>使用Nginx代理(同时代理http和websocket请求)</span></a></h2>`,3),m={href:"https://coder.com/docs/code-server/latest/guide#using-lets-encrypt-with-nginx",target:"_blank",rel:"noopener noreferrer"},b={href:"https://github.com/coder/code-server/issues/6014",target:"_blank",rel:"noopener noreferrer"},k=r(`<div class="language-conf line-numbers-mode" data-ext="conf" data-title="conf"><pre class="language-conf"><code>http {
+  # 自定义变量 $connection_upgrade
+  map $http_upgrade $connection_upgrade {
+          default Upgrade;
+          &#39;&#39;      close;
+  }
+
+  map $host $docker_host {
+    default 192.168.50.230;
+  }
+
+  server {
+    listen 10073;
+    location / {
+        proxy_pass http://$docker_host:10073;
+        proxy_set_header HOST $host;
+        proxy_set_header X-Forwarded-Host $host:$server_port;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
+        proxy_set_header Accept-Encoding gzip;
+    }
+  }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,1),g=e("br",null,null,-1),_={href:"https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Forwarded-For",target:"_blank",rel:"noopener noreferrer"},f=r(`<h2 id="两服务器目录文件的数据同步" tabindex="-1"><a class="header-anchor" href="#两服务器目录文件的数据同步"><span>两服务器目录文件的数据同步</span></a></h2><p>SSHFS（SSH Filesystem）是一个基于FUSE的文件系统客户端，用于通过SSH连接远程目录。SSHFS使用的是SFTP协议，它是SSH的一个子系统，在大多数SSH服务器上默认启用</p><p>与其他网络文件系统（如NFS和Samba）相比，SSHFS的优势在于它不需要在服务器端进行任何额外的配置。要使用SSHFS，您只需要SSH访问远程服务器。</p><div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code>sshfs usr@host:/dir  /dir
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,4);function x(S,y){const s=o("ExternalLinkIcon");return i(),d("div",null,[l,e("p",null,[e("a",p,[n("config文件配置"),a(s)])]),v,e("p",null,[e("a",h,[n("参考文档"),a(s)])]),u,e("p",null,[e("a",m,[n("nginx"),a(s)]),e("a",b,[n("websocket代理失败参考"),a(s)])]),k,e("blockquote",null,[e("p",null,[n("如果websocket请求用户校验一直无法通过可以尝试添加该配置解决问题,为向服务器提供更有用的客户端 IP 地址"),g,n(" 具体作用可参考"),e("a",_,[n("X-Forwarded-For"),a(s)])])]),f])}const F=t(c,[["render",x],["__file","code_server.html.vue"]]),H=JSON.parse('{"path":"/practice/code_server.html","title":"使用nginx及Docker部署Code Server","lang":"zh-CN","frontmatter":{"date":"2023-09-01T00:00:00.000Z","category":"实践","tag":["docker","nginx"]},"headers":[{"level":2,"title":"Docker启动Code Server","slug":"docker启动code-server","link":"#docker启动code-server","children":[{"level":3,"title":"创建目录挂载目录","slug":"创建目录挂载目录","link":"#创建目录挂载目录","children":[]}]},{"level":2,"title":"使用Nginx代理(同时代理http和websocket请求)","slug":"使用nginx代理-同时代理http和websocket请求","link":"#使用nginx代理-同时代理http和websocket请求","children":[]},{"level":2,"title":"两服务器目录文件的数据同步","slug":"两服务器目录文件的数据同步","link":"#两服务器目录文件的数据同步","children":[]}],"git":{"createdTime":1713428395000,"updatedTime":1713428395000},"readingTime":{"minutes":1.43,"words":428},"filePathRelative":"practice/code_server.md","localizedDate":"2023年9月1日"}');export{F as comp,H as data};
