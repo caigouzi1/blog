@@ -61,7 +61,7 @@ export default hopeTheme({
   },
 
   plugins: {
-    autoCatalog :false,
+    catalog :false,
     blog: {
       excerpt: false,
       excerptLength: 0,
@@ -82,8 +82,8 @@ export default hopeTheme({
       comment: true,
       repo:"caigouzi1/blog",
       repoId:"R_kgDOGubgfg",
-      category:"Q&A",
-      categoryId:"DIC_kwDOGubgfs4CW2ab",
+      category:"General",
+      categoryId:"DIC_kwDOGubgfs4CW2aa",
     },
     mdEnhance: {
       // enableAll: true,
