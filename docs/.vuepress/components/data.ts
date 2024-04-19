@@ -30,6 +30,13 @@ export const webList: ICategary[] = [
     ],
   },
   {
+    category: '样式库',
+    list: [
+      {title: 'hyperui', link: 'https://www.hyperui.dev/'},
+      {title: 'floatui', link: 'https://floatui.com/components'},
+    ]
+  },
+  {
     category: '跨平台',
     list: [
       { title: 'Taro 文档', link: 'https://docs.taro.zone/docs' },
