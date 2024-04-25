@@ -34,6 +34,8 @@ export const webList: ICategary[] = [
     list: [
       {title: 'hyperui', link: 'https://www.hyperui.dev/'},
       {title: 'floatui', link: 'https://floatui.com/components'},
+      {title: 'uiverse', link: 'https://uiverse.io/elements'},
+      {title: 'flowbite', link: 'https://flowbite.com/docs/components/accordion/'},
     ]
   },
   {
