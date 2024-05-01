@@ -1,7 +1,7 @@
 // .vuepress/theme/index.ts
 import { defineUserConfig, Theme } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
-import {getDirname, path} from '@vuepress/utils'
+import {getDirname, path} from 'vuepress/utils'
 import themeConfig from './themeConfig'
 const __dirname = getDirname(import.meta.url);
 

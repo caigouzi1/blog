@@ -1,8 +1,8 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 import navbar from './navbar'
 import sidebar from './sidebar'
-import { getDirname, path } from '@vuepress/utils'
-import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+import { getDirname, path } from 'vuepress/utils'
+
 const __dirname = getDirname(import.meta.url);
 
 
@@ -61,7 +61,7 @@ export default hopeTheme({
   },
 
   plugins: {
-    catalog :false,
+    catalog: false,
     blog: {
       excerpt: false,
       excerptLength: 0,
