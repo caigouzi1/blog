@@ -25,7 +25,7 @@ export default defineUserConfig({
   title: '工作学习记录',
   theme: themeConfig,
   alias: {
-    '@theme-hope/modules/blog/components/BlogHome': path.resolve(__dirname, './components/HomePage')
+    '@theme-hope/components/HomePage': path.resolve(__dirname, './components/HomePage.vue')
   },
   shouldPrefetch: false,
 })

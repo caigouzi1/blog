@@ -114,4 +114,4 @@ export default hopeTheme({
       // presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
     },
   },
-}, {custom: true})
+}, {custom: true, check: true})
