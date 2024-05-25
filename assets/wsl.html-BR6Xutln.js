@@ -1,0 +1,20 @@
+import{_ as s,c as a,o as e,a as n}from"./app-DaJ1Kvbf.js";const l={},i=n(`<h1 id="wsl开发" tabindex="-1"><a class="header-anchor" href="#wsl开发"><span>WSL开发</span></a></h1><h2 id="相关博客" tabindex="-1"><a class="header-anchor" href="#相关博客"><span>相关博客</span></a></h2><ol><li><a href="https://zhuanlan.zhihu.com/p/122214146" target="_blank" rel="noopener noreferrer">Linux系统各发行版换国内yum或apt源，加速软件下载更新</a></li></ol><blockquote><p><a href="https://learn.microsoft.com/zh-cn/windows/wsl/basic-commands" target="_blank" rel="noopener noreferrer">微软官方文档</a></p></blockquote><h2 id="常用命令" tabindex="-1"><a class="header-anchor" href="#常用命令"><span>常用命令</span></a></h2><div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment"># 列出可用的 Linux 发行版</span>
+wsl <span class="token parameter variable">--list</span> <span class="token parameter variable">--online</span>
+
+<span class="token comment"># 列出已安装的 Linux 发行版</span>
+wsl <span class="token parameter variable">--list</span> <span class="token parameter variable">--verbose</span>
+
+<span class="token comment"># 将 WSL 版本设置为 1 或 2</span>
+wsl --set-version <span class="token operator">&lt;</span>distribution name<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>versionNumber<span class="token operator">&gt;</span>
+
+<span class="token comment"># 设置默认 WSL 版本</span>
+wsl --set-default-version <span class="token operator">&lt;</span>Version<span class="token operator">&gt;</span>
+
+<span class="token comment"># 设置默认 Linux 发行版</span>
+wsl --set-default <span class="token operator">&lt;</span>Distribution Name<span class="token operator">&gt;</span>
+
+<span class="token comment"># 注销或卸载 Linux 发行版</span>
+wsl <span class="token parameter variable">--unregister</span> <span class="token operator">&lt;</span>DistributionName<span class="token operator">&gt;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="vscode的使用" tabindex="-1"><a class="header-anchor" href="#vscode的使用"><span>VsCode的使用</span></a></h2><ol><li><p>vim ~/.bashrc添加环境变量</p><div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token builtin class-name">alias</span> <span class="token assign-left variable">code</span><span class="token operator">=</span><span class="token string">&quot;/mnt/d/code/Microsoft\\ VS\\ Code/Code.exe&quot;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li><li><p>使设置生效</p><div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token builtin class-name">source</span> ~/.bashrc
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li></ol>`,8),t=[i];function r(o,c){return e(),a("div",null,t)}const p=s(l,[["render",r],["__file","wsl.html.vue"]]),m=JSON.parse('{"path":"/manual/wsl.html","title":"WSL开发","lang":"zh-CN","frontmatter":{"date":"2020-12-14T00:00:00.000Z","category":"开发者手册","tag":["wsl"]},"headers":[{"level":2,"title":"相关博客","slug":"相关博客","link":"#相关博客","children":[]},{"level":2,"title":"常用命令","slug":"常用命令","link":"#常用命令","children":[]},{"level":2,"title":"VsCode的使用","slug":"vscode的使用","link":"#vscode的使用","children":[]}],"git":{"createdTime":1716651784000,"updatedTime":1716651784000},"readingTime":{"minutes":0.55,"words":165},"filePathRelative":"manual/wsl.md","localizedDate":"2020年12月14日"}');export{p as comp,m as data};
