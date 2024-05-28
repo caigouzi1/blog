@@ -21,16 +21,17 @@ jobs:
 
       - uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
+          # 使用 pnpm 安装依赖
+          run_install: true
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          # 选择要使用的 node 版本
+          node-version: 20
+          # 缓存 pnpm 依赖
           cache: pnpm
-
-      - name: Install Deps
-        run: pnpm install --no-frozen-lockfile
 
       # 生成静态文件
       - name: Build Blog
