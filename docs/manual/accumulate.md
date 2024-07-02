@@ -25,8 +25,7 @@ star: true
 
 ### WebStorm
 
->激活码 ：[http://lookdiv.com](http://lookdiv.com/)  
-
+>激活 ：[jetbrains激活站](https://3.jetbra.in/)  
 >插件 ：
 >
 > - 重启ide激活 :[文章](https://laowangblog.com/ide-eval-resetter-jetbrains-trial.html) 、
