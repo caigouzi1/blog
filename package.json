@@ -15,7 +15,7 @@
   "homepage": "https://caigouzi1.github.io/blog",
   "license": "MIT",
   "devDependencies": {
-    "@vue/repl": "^4.2.1",
+    "@vue/repl": "^4.3.1",
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "@vuepress/plugin-pwa": "2.0.0-rc.37",
     "mermaid": "^10.9.1",
