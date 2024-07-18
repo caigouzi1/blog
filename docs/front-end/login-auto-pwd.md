@@ -9,13 +9,25 @@ tag:
 
 ## Chromium系内核
 
+### 方法1(测试不生效)
+
 > 向页面中添加假登录表单并隐藏，代码如下
 
 ```html
-  <div style="display:block;opacity: 0;width:0px;height:0px;overflow: hidden">
-    <input type="text" name="username" autocomplete="off" />
-    <input type="password" name="password" autocomplete="off" readonly />
-  </div>
+<div style="display:block;opacity: 0;width:0px;height:0px;overflow: hidden">
+  <input type="text" name="username" autocomplete="off" />
+  <input type="password" name="password" autocomplete="off" readonly />
+</div>
+```
+
+### 方法2
+
+> form表单设置`autocomplete`值为`off`
+
+```vue
+<el-form autocomplete="off">
+  ...
+</el-form>
 ```
 
 ## Firefox浏览器
