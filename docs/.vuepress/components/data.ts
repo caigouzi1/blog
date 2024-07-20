@@ -70,6 +70,7 @@ export const webList: ICategary[] = [
       { title: '丑丑头像生成器' , link: 'https://txstc55.github.io/ugly-avatar/'},
       { title: 'Ai图片库' , link: 'https://mj.u14.app/'},
       { title: 'Ai图片库' , link: 'https://www.ai-img-gen.com/'},
+      { title: 'GitHub搜索' , link: 'https://exa.ai/search'},
     ],
   },
   {
