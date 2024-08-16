@@ -16,12 +16,12 @@
   "license": "MIT",
   "devDependencies": {
     "@vue/repl": "^4.3.1",
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
-    "@vuepress/plugin-pwa": "2.0.0-rc.40",
+    "@vuepress/bundler-vite": "2.0.0-rc.15",
+    "@vuepress/plugin-pwa": "2.0.0-rc.41",
     "mermaid": "^10.9.1",
     "reveal.js": "^5.1.0",
-    "vue": "^3.4.37",
-    "vuepress": "2.0.0-rc.14",
+    "vue": "^3.4.38",
+    "vuepress": "2.0.0-rc.15",
     "vuepress-theme-hope": "2.0.0-rc.52"
   },
   "engines": {

@@ -6,8 +6,6 @@ tag:
   - vudio
 ---
 
-
-
 # 使用vudio实现音频可视化
 
 ## 使用siriwave
@@ -35,7 +33,6 @@ siriWave.stop()
 
 [文档](https://github.com/alex2wong/vudio)  
 [效果预览](https://alex2wong.github.io/vudio/)
- 
 
 ```vue
 <script setup lang="ts">
@@ -64,7 +61,6 @@ vudio?.dance();
 vudio?.pause();
 </script>
 ```
-
 
 ::: playground#vue vudio音频可视化
 
