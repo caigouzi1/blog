@@ -4,6 +4,7 @@ category: 实践
 tag:
   - docker
   - nginx
+  - websocket
 ---
 
 # 使用nginx及Docker部署Code Server
@@ -61,6 +62,7 @@ http {
   server {
     listen 10073;
     location / {
+        proxy_http_version 1.1;  # 添加长连接支持
         proxy_pass http://$docker_host:10073;
         proxy_set_header HOST $host;
         proxy_set_header X-Forwarded-Host $host:$server_port;
@@ -72,8 +74,17 @@ http {
 }
 ```
 
-> 如果websocket请求用户校验一直无法通过可以尝试添加该配置解决问题,为向服务器提供更有用的客户端 IP 地址  
-> 具体作用可参考[X-Forwarded-For](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Forwarded-For)
+### proxy_http_version 1.1 说明
+
+nginx在反向代理HTTP协议的时候，默认使用的是HTTP1.0去向后端服务器获取响应的内容后在返回给客户端。  
+HTTP1.0和HTTP1.1的一个不同之处就是，HTTP1.0不支持HTTP keep-alive。  
+如果要转发Websocket请求，必须要指定 proxy_http_version 1.1 主要是为了长连接有效  
+如果发现**websocket链接成功后又马上断开**则需要检查是否添加该配置。
+
+### X-Forwarded-For 说明
+
+如果websocket请求用户校验一直无法通过可以尝试添加该配置解决问题,为向服务器提供更有用的客户端 IP 地址  
+具体作用可参考[X-Forwarded-For](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Forwarded-For)
 
 ## 两服务器目录文件的数据同步
 
