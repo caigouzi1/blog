@@ -15,14 +15,14 @@
   "homepage": "https://caigouzi1.github.io/blog",
   "license": "MIT",
   "devDependencies": {
-    "@vue/repl": "^4.3.1",
-    "@vuepress/bundler-vite": "2.0.0-rc.15",
-    "@vuepress/plugin-pwa": "2.0.0-rc.41",
-    "mermaid": "^10.9.1",
+    "@vue/repl": "^4.4.2",
+    "@vuepress/bundler-vite": "2.0.0-rc.18",
+    "@vuepress/plugin-pwa": "2.0.0-rc.55",
+    "mermaid": "^10.9.2",
     "reveal.js": "^5.1.0",
-    "vue": "^3.4.38",
-    "vuepress": "2.0.0-rc.15",
-    "vuepress-theme-hope": "2.0.0-rc.52"
+    "vue": "^3.5.12",
+    "vuepress": "2.0.0-rc.18",
+    "vuepress-theme-hope": "2.0.0-rc.58"
   },
   "engines": {
     "node": ">=20"
@@ -30,5 +30,8 @@
   "volta": {
     "node": "20.15.1",
     "pnpm": "9.0.1"
+  },
+  "dependencies": {
+    "sass-embedded": "^1.79.5"
   }
 }

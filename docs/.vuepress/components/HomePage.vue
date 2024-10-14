@@ -14,7 +14,7 @@
             <div class="grid">
               <div v-for="web in categoryItem.list">
                 <a class="item-wrapper" :href="web.link" target="_blank">
-                  <a>{{ web.title }}</a>
+                  <span>{{ web.title }}</span>
                 </a>
               </div>
             </div>
