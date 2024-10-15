@@ -61,6 +61,91 @@ http {
 }
 ```
 
+## proxy_pass url反向代理的注意事项
+
+### url只是host
+
+```nginx
+# 访问：   /                               后端：   /
+# 访问：   /api/xx                         后端：   /api/xx
+# 访问：   /api/xx?aa                      后端：   /api/xx?aa
+location / {
+    proxy_pass http://node:8080;
+}
+
+# 访问：   /api/                           后端：   /api/
+# 访问：   /api/xx                         后端：   /api/xx
+# 访问：   /api/xx?aa                      后端：   /api/xx?aa
+# 访问：   /api-xx?aa                      后端：
+location /api/ {
+    proxy_pass http://node:8080;
+}
+
+# 访问：   /api/                           后端：   /api/
+# 访问：   /api/xx                         后端：   /api/xx
+# 访问：   /api/xx?aa                      后端：   /api/xx?aa
+# 访问：   /api-xx?aa                      后端：   /api-xx?aa
+location /api {
+    proxy_pass http://node:8080;
+}
+```
+
+### url包含路径
+
+当 `proxy_pass url` 的 `url` 包含路径时，匹配时会根据 `location` 的匹配后的链接透传给 `url` ，注意匹配后就是这样：
+
+| `location` 规则 | 访问的原始链接 | 匹配之后的路径 |
+| --- | --- | --- |
+| `location /` | `/` | `` |
+| `location /` | `/a` | `a` |
+| `location /` | `/a/b/c?d` | `a/b/c?d` |
+| `location /a/` | `/a/` | `` |
+| `location /a/` | `/a/b/c?d` | `b/c?d` |
+
+明白匹配之后的路径后，在 `proxy_pass url` 包含路径时，将会把匹配之后的路径透传给 `url` ，如：
+
+```nginx
+# 访问：   /                               后端：   /
+# 访问：   /api/xx                         后端：   /api/xx
+# 访问：   /api/xx?aa                      后端：   /api/xx?aa
+location / {
+    proxy_pass http://node:8080/;
+}
+
+# 访问：   /api/                           后端：   /
+# 访问：   /api/xx                         后端：   /xx
+# 访问：   /api/xx?aa                      后端：   /xx?aa
+# 访问：   /api-xx?aa                      未匹配
+location /api/ {
+    proxy_pass http://node:8080/;
+}
+
+# 访问：   /api                            后端：   /
+# 访问：   /api/                           后端：   //
+# 访问：   /api/xx                         后端：   //xx
+# 访问：   /api/xx?aa                      后端：   //xx?aa
+# 访问：   /api-xx?aa                      后端：   /-xx?aa
+location /api {
+    proxy_pass http://node:8080/;
+}
+
+# 访问：   /api/                           后端：   /v1
+# 访问：   /api/xx                         后端：   /v1xx
+# 访问：   /api/xx?aa                      后端：   /v1xx
+# 访问：   /api-xx?aa                      未匹配
+location /api/ {
+    proxy_pass http://node:8080/v1;
+}
+
+# 访问：   /api/                           后端：   /v1/
+# 访问：   /api/xx                         后端：   /v1/xx
+# 访问：   /api/xx?aa                      后端：   /v1/xx
+# 访问：   /api-xx?aa                      未匹配
+location /api/ {
+    proxy_pass http://node:8080/v1/;
+}
+```
+
 ## nginx相关网站
 
 - <https://xuexb.github.io/learn-nginx/>
