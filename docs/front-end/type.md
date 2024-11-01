@@ -2,7 +2,7 @@
 date: 2024-07-18
 category: 前端
 tag:
-  - TS
+  - TypeScript
 ---
 
 # TypeScript相关
@@ -62,3 +62,29 @@ type PartiallyOptional<Type, Keys extends keyof Type> = Omit<Type, Keys> & Parti
 >  d: number,
 >}
 >```
+
+### 提取对象的部分属性并将其设置为可选项
+
+```ts
+  type PartialPick<Type, Keys> = Partial<Pick<Type, Keys>>;
+```
+
+>用例
+>
+>```ts
+>interface ITest {
+>  a: number,
+>  b: number,
+>  c: number,
+>  d: number,
+>}
+>
+>PartialPick<ITest, 'a' | 'b'>
+>
+>// 等同于
+>
+>interface ITest {
+>  a?: number,
+>  b?: number
+>}
+>``

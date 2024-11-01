@@ -76,7 +76,7 @@ export const webList: ICategary[] = [
   {
     category: '杂项',
     list: [
-      {title: '京吹学报', link: 'https://hibikilogy.github.io/'}
+      {title: '京吹学报', link: 'https://hibikilogy.github.io/'},
     ]
   }
 ]

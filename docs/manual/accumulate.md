@@ -40,7 +40,9 @@ star: true
 >
 > - **office下载 ：**[https://otp.landian.vip/zh-cn/](https://otp.landian.vip/zh-cn//)
 > - **office激活 ：**[HEU KMS Activator](https://github.com/zbezj/HEU_KMS_Activator/releases)
-> - **Office Online Server ：**   [服务部署](https://docs.fuyeor.com/office-online-server-2016oos/)
+> - **Office Online Server ：**   [服务部署](https://docs.fuyeor.com/office-online-server-2016oos/)  
+> - **Windows/Office 下载激活：** [MAS](https://massgrave.dev/)  
+> - **系统镜像下载：** [UUP dump](https://uupdump.net/)、[OS.click](https://os.click/)
 
 ## 网络
 >
