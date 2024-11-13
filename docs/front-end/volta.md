@@ -46,6 +46,11 @@ Windows中 `%LOCALAPPDATA%\Volta\hooks.json`
     "distro": {
       "template": "https://mirrors.aliyun.com/nodejs-release/v{{version}}/{{filename}}"
     }
+  },
+  "npm": {
+    "index": {
+      "prefix": "http://registry.npmmirror.com"
+    }
   }
 }
 ```
