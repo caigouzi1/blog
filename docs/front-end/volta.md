@@ -49,8 +49,23 @@ Windows中 `%LOCALAPPDATA%\Volta\hooks.json`
   },
   "npm": {
     "index": {
-      "prefix": "http://registry.npmmirror.com"
+      "prefix": "http://mirrors.tencent.com/npm/"
+    },
+    "latest": {
+      "bin": "~/npm-latest"
+    },
+    "distro": {
+      "template": "https://mirrors.tencent.com/npm/npm/-/npm-{{version}}.tgz"
     }
+  },
+  "pnpm": {
+    "index": {
+      "prefix": "http://mirrors.tencent.com/npm/"
+    },
+    "distro": {
+      "template": "https://mirrors.tencent.com/npm/pnpm/-/pnpm-{{version}}.tgz"
+    },
+    "format": "npm"
   }
 }
 ```
