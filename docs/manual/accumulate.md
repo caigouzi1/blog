@@ -17,7 +17,7 @@ star: true
 - 数据库可视化管理：[DBeaver](https://dbeaver.io/download/)
 - android应用架构分析工具: [libchecker](https://github.com/zhaobozhen/LibChecker)
 - ssh工具: [tabby](https://tabby.sh/)
-- github下载加速: [doget](https://doget.nocsdn.com/#/)、 [toolwa](http://toolwa.com/github)
+- github下载加速: [doget](https://doget.nocsdn.com/#/)、 [toolwa](http://toolwa.com/github)、[FastGitHub](https://github.com/WangGithubUser/FastGitHub)
 - Navicat: [NavicatCracker](https://gitee.com/shuhongfan/NavicatCracker)、 [Navicat安装包及NavicatCracker](https://www.cnblogs.com/kkdaj/p/16260681.html)、[相关博客](https://www.cnblogs.com/kkdaj/p/16260681.html)  
 - 网页打包客户端工具: [Pake](https://github.com/tw93/Pake)
 

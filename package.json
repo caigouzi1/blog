@@ -17,7 +17,7 @@
   "devDependencies": {
     "@vue/repl": "^4.4.2",
     "@vuepress/bundler-vite": "2.0.0-rc.18",
-    "@vuepress/plugin-pwa": "2.0.0-rc.57",
+    "@vuepress/plugin-pwa": "2.0.0-rc.60",
     "mermaid": "^10.9.3",
     "reveal.js": "^5.1.0",
     "vue": "^3.5.12",
@@ -32,6 +32,6 @@
     "pnpm": "9.0.1"
   },
   "dependencies": {
-    "sass-embedded": "^1.80.5"
+    "sass-embedded": "^1.80.7"
   }
 }
