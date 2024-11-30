@@ -17,7 +17,6 @@ tag:
 type Tree<T, C extends string = 'children'> = T & { [K in C]?: Array<Tree<T, C>> };
 ```
 
-
 用例
 
 ```ts
@@ -90,4 +89,4 @@ interface ITest {
   a?: number,
   b?: number
 }
-``
+```
