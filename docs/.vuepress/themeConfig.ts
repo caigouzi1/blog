@@ -14,8 +14,6 @@ export default hopeTheme({
     url: 'https://github.com/caigouzi1',
   },
 
-  iconPrefix: 'iconfont icon-',
-
   logo: '/avatar.png',
 
   repo: 'https://github.com/caigouzi1/blog',
@@ -59,8 +57,38 @@ export default hopeTheme({
       '/guide/encrypt.html': ['woshicaigouzi'],
     },
   },
-
+  markdown: {
+      // enableAll: true,
+      mermaid: true,
+      demo: true,  // 代码演示
+      vuePlayground: true,  // Vue 交互演示
+      playground: {
+        // 添加预设
+        presets: [
+          "ts",
+          "vue",
+        ],
+        // 设置内置预设 (可选)
+        config: {
+          ts: {
+            // ...
+          },
+          vue: {
+            // ...
+          },
+        },
+      },
+      include: true,
+      revealjs: {
+        themes: ['auto'],
+        plugins: ['highlight', 'math', 'search', 'notes', 'zoom']
+      },
+    },
   plugins: {
+    icon: {
+      prefix: 'iconfont icon-',
+    },
+
     catalog: false,
     blog: {
       excerpt: false,
@@ -85,33 +113,6 @@ export default hopeTheme({
       category:"General",
       categoryId:"DIC_kwDOGubgfs4CW2aa",
     },
-    mdEnhance: {
-      // enableAll: true,
-      mermaid: true,
-      demo: true,  // 代码演示
-      vuePlayground: true,  // Vue 交互演示
-      playground: {
-        // 添加预设
-        presets: [
-          "ts",
-          "vue",
-        ],
-        // 设置内置预设 (可选)
-        config: {
-          ts: {
-            // ...
-          },
-          vue: {
-            // ...
-          },
-        },
-      },
-      include: true,
-      revealJs: {
-        themes: ['auto'],
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom']
-      },
-      // presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
-    },
+
   },
 }, {custom: true, check: true})
