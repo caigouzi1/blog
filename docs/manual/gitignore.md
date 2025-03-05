@@ -14,7 +14,7 @@ tag:
 
 * 修改 .gitignore 文件
 
-```gitignore
+```text
 node_modules
 package-lock.json
 ```

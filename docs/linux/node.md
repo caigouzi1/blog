@@ -15,13 +15,13 @@ tag:
 
 * 安装forever
 
-  ```node
+  ```bash
   yarn global add forever
   ```
 
 * 用forever开启nodejs程序
 
-  ```php
+  ```bash
   forever start xxx.js //运行node程序
   forever start -c “npm start”  path/xxx.js //用npm start来运行你的程序
   ```

@@ -15,8 +15,8 @@ tag:
 
 ### 使用filter-branch命令
 
-```git
-$ git filter-branch --force --index-filter \
+```bash
+git filter-branch --force --index-filter \
 'git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA' \
 --prune-empty --tag-name-filter cat -- --all
 ```
@@ -27,7 +27,7 @@ $ git filter-branch --force --index-filter \
 
 例如：
 
-```git
+```bash
 git filter-branch --force --index-filter 'git rm --cached -r --ignore-unmatch ./public/img/map/' --prune-empty --tag-name-filter cat -- --all
 ```
 
@@ -72,11 +72,11 @@ git gc --aggressive --prune=now
 1. 每次启动或打包前先解压文件
     修改package.json文件中的脚本部分
 
-    ```diff
+    ```json
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    + "preserve": "extract-zip ./maptool/map.zip ./public/img",
-    + "prebuild": "extract-zip ./maptool/map.zip ./public/img"
+    "preserve": "extract-zip ./maptool/map.zip ./public/img", // [!code ++]
+    "prebuild": "extract-zip ./maptool/map.zip ./public/img"  // [!code ++]
     ```
 
 ### 编辑.gitignore

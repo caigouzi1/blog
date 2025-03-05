@@ -15,7 +15,7 @@ tag:
   > ssh-keygen -t rsa -C 'xxxxx@youremail.com' -f ~/.ssh/xxx_id_rsa
   > 生成并配置config文件
   >
-  > ```
+  > ```ssh-config
   > # gitee
   > Host gitee.com
   > HostName gitee.com
@@ -42,7 +42,7 @@ tag:
 1. 将公钥文件id_rsa.pub上传至用户目录
 1. 依次执行一下命令
 
-    ```sh
+    ```bash
     mv id_rsa.pub .ssh
     cd .ssh
     cat id_rsa.pub >> authorized_keys
@@ -54,7 +54,7 @@ tag:
 
 1. 进入`/etc/ssh/sshd_config`目录配置
 
-    ```ssh
+    ```ssh-config
     # 允许root用户通过ssh登录
     PermitRootLogin yes
 
@@ -68,7 +68,7 @@ tag:
 
 1. 重启ssh
 
-    ```sh
+    ```bash
     service sshd restart
     ```
 

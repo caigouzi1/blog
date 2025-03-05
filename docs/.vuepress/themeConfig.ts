@@ -58,7 +58,11 @@ export default hopeTheme({
     },
   },
   markdown: {
-      // enableAll: true,
+    // enableAll: true,
+      highlighter: {
+        type: 'shiki',
+        notationDiff: true
+      },
       mermaid: true,
       demo: true,  // 代码演示
       vuePlayground: true,  // Vue 交互演示

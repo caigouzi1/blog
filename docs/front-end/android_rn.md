@@ -14,9 +14,9 @@ tag:
 
 进入`android/gradle/wrapper/gradle-wrapper.properties`文件修改Gradle工具下载网址
 
-  ```diff
-  - distributionUrl=https\://services.gradle.org/distributions/gradle-8.3-all.zip
-  + distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.3-all.zip
+  ```properties
+  distributionUrl=https\://services.gradle.org/distributions/gradle-8.3-all.zip  # [!code --]
+  distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.3-all.zip  # [!code ++]
   ```
 
 ### 修改React Native项目依赖

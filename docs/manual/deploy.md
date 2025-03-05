@@ -10,7 +10,9 @@ tag:
 
 ### 私有镜像npm登陆问题
 
-```Jenkins
+在项目的根目录下寻找`Jenkinsfile`文件
+
+```groovy
 steps {
     sh "npm set registry http://nvwa.jiuqi.com.cn/nexus/repository/npm-nvware-group/"
     sh "npm config set //nvwa.jiuqi.com.cn/nexus/repository/npm-nvware-group/:_authToken=NpmToken.3bb085e0-a9b5-36e1-be9f-311bb5630c2b"

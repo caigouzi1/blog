@@ -11,7 +11,7 @@ tag:
 
 ## Java环境部署
 
-### 复制java相关文件 
+### 复制java相关文件
 
 `/opt/moudle` 、 `/usr/share/java` 两个文件夹至新的服务器中
 

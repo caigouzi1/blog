@@ -23,4 +23,13 @@ export default class EnumFactory<T extends string | number, K = { label: string 
       throw new Error(`无效的枚举值: ${val}`);
     }
   }
+
+  valueOfByField<F extends keyof K>(value: K[F], field: F): EnumFactoryValue<T, K> {
+    const res = this.list.find((item) => item[field] === value);
+    if (res) {
+      return res
+    } else {
+      throw new Error(`无效的枚举值: ${value}`);
+    }
+  }
 }

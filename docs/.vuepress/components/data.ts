@@ -32,6 +32,7 @@ export const webList: ICategary[] = [
   {
     category: '样式库',
     list: [
+      { title: 'UILibHub', link: 'https://uilibhub.com/zh' },
       {title: 'hyperui', link: 'https://www.hyperui.dev/'},
       {title: 'floatui', link: 'https://floatui.com/components'},
       {title: 'uiverse', link: 'https://uiverse.io/elements'},

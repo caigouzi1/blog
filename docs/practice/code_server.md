@@ -47,7 +47,7 @@ docker run -it --name code-server -p 127.0.0.1:8080:8080 -auth none \
 [nginx](https://coder.com/docs/code-server/latest/guide#using-lets-encrypt-with-nginx)
 [websocket代理失败参考](https://github.com/coder/code-server/issues/6014)
 
-```conf
+```nginx
 http {
   # 自定义变量 $connection_upgrade
   map $http_upgrade $connection_upgrade {
