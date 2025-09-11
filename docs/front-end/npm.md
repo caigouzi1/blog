@@ -29,6 +29,15 @@ npm install express --registry https://registry.npmjs.org
 
 ## 提高node模块安装速度
 
+### 配置.npmrc文件
+
+```ini
+registry=https://registry.npmmirror.com/
+sass_binary_site=https://npmmirror.com/mirrors/node-sass/
+```
+
+### 使用`mirror-config-china`(不推荐)
+
 ```bash
 npm install -g mirror-config-china
 ```

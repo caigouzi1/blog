@@ -76,7 +76,7 @@ off 表示禁用全局变量
 
 `.editorconfig`文件
 
-```editorconfig
+```ini
 [*]
 charset=utf-8
 end_of_line=lf

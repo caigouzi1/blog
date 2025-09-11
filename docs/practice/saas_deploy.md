@@ -25,7 +25,7 @@ tag:
 
 1. 添加java相关的配置信息
 
-    ```profile
+    ```bash
     export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
     export JRE_HOME=$JAVA_HOME/jre
