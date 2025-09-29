@@ -15,6 +15,7 @@ export const webList: ICategary[] = [
     list: [
       { title: 'Ant Design 文档', link: 'https://ant-design.antgroup.com/components/overview-cn/' },
       { title: 'Umi 文档', link: 'https://umijs.org/docs/tutorials/getting-started' },
+      { title: 'ReactBits 动效', link: 'https://www.reactbits.dev/get-started/installation' },
     ],
   },
   {

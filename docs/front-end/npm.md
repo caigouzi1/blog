@@ -44,6 +44,20 @@ npm install -g mirror-config-china
 
 >出现 sass 相关的安装错误时可解决该问题
 
+## 固定npm二级依赖版本
+
+> overrides 可重写某个特定模块下的子依赖（可以嵌套的书写）  
+> yarn 中重写依赖的字段不是 overrides 而是 resolutions
+
+```json
+  "overrides": {
+    "cssnano": "6.1.2"
+  },
+  "resolutions": {
+    "cssnano": "6.1.2"
+  },
+```
+
 ## npm scripts相关
 
 ### pre和post两个钩子
