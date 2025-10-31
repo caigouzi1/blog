@@ -38,13 +38,10 @@ Windows中 `%LOCALAPPDATA%\Volta\hooks.json`
 {
   "node": {
     "index": {
-      "template": "https://mirrors.aliyun.com/nodejs-release/index.json"
-    },
-    "latest": {
-      "prefix": "https://mirrors.aliyun.com/nodejs-release/"
+      "template": "https://mirrors.tencent.com/nodejs-release/index.json"
     },
     "distro": {
-      "template": "https://mirrors.aliyun.com/nodejs-release/v{{version}}/{{filename}}"
+      "template": "https://mirrors.tencent.com/nodejs-release/v{{version}}/{{filename}}"
     }
   },
   "npm": {
