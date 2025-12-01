@@ -26,6 +26,11 @@ star: true
 ### WebStorm
 
 >激活 ：[jetbrains激活站](https://3.jetbra.in/)  ｜ [第三方链接](https://www.kdaiyu.com/3.jetbra.in/)  ｜ [Key查看](https://github.com/jonssonyan/3.jetbra.in)  
+>
+> 服务器激活
+> fofa语法：`header="https://account.jetbrains.com/fls-auth"`  
+> [直达查询结果](https://fofa.info/result?qbase64=aGVhZGVyPSJodHRwczovL2FjY291bnQuamV0YnJhaW5zLmNvbS9mbHMtYXV0aCI%3D)
+>
 >插件 ：
 >
 > - 重启ide激活 :[文章](https://laowangblog.com/ide-eval-resetter-jetbrains-trial.html) 、
