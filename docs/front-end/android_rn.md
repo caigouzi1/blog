@@ -82,3 +82,11 @@ repositories {
     ...
   }
 ```
+
+## 其他
+
+### Android Studio查看签名文件信息MD5,SHA1
+
+  1. 点击 Android Studio 右上角 `Gradle`
+  1. 点击 `Execute Gradle Task`
+  1. 输入`gradle signingReport`命令
