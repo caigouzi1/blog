@@ -71,6 +71,7 @@ export default hopeTheme({
         presets: [
           "ts",
           "vue",
+          "unocss",
         ],
         // 设置内置预设 (可选)
         config: {

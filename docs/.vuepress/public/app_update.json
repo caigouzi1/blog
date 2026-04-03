@@ -1,0 +1,37 @@
+{
+  "wgtUrl": "https:/xxxxx.wgt",
+  "iosAppstore": "itms-apps://apps.apple.com/cn/app/%E6%B8%B8%E4%BE%A0%E5%9C%88/idxxxxx?uo=4",
+  "apkUrl": "https://xxxx-release.apk",
+  "androidAppstorexiaomi": "market://details?id=xxx",
+  "androidAppstoretencent": "tmast://appdetails?pname=xxx",
+  "channelApkxiaomi": "https://xxx-release.apk",
+  "marketUpdateChannelWgt": ",xiaomi",
+  "marketUpdateChannelApk": ",,",
+  "message": "1.修复bug",
+  "version": "1.0.2",
+  "minVersion": "1.0.1",
+  "grayscaleWgtUrl": "https://xxxx.wgt",
+  "grayscaleApkUrl": "https://xxx-release.apk",
+  "grayscaleChannelApkxiaomi": "https://xxx-release.apk",
+  "grayscaleVersion": "1.0.2",
+  "grayscaleAccountAllowList": ",1,",
+  "testVersion": ",1.0.5,",
+  "reviewVersion": ",1.0.4,",
+  "config": {
+    "type": "product",
+    "apiPath": "https://xxxx"
+  },
+  "testConfigExclude": "",
+  "testConfig": {
+    "type": "test",
+    "apiPath": "https://xxxx"
+  },
+  "reviewConfigExclude": ",xiaomi,",
+  "reviewConfig": {
+    "type": "review",
+    "apiPath": "https://xxxx",
+    "ios": {
+      "apiPath": "https://xxxx"
+    }
+  }
+}
