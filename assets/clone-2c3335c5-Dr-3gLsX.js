@@ -1,0 +1,1 @@
+import{l as e}from"./graph-80608c14-CYpMYlNP.js";var t=4;function n(n){return e(n,t)}export{n as t};
