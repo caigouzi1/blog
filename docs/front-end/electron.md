@@ -126,6 +126,33 @@ yarn add electron-builder  --dev
 }
   ```
 
+## 6. 使用[HTTP Toolkit](https://httptoolkit.com/)调试electron中Node端网络请求
+
+1. 首先在官网下载HTTP Toolkit客户端
+1. 打开HTTP Toolkit客户端，点击`Intercept`Tab
+1. 点击`Fresh Terminal`按钮，会自动打开一个新的终端窗口
+1. 在终端窗口中执行Electron的启动命令，如下
+
+    ```bash
+    cd /d D:\work_space\xxx
+    pnpm run dev
+    ```
+
+1. 在HTTP Toolkit客户端中点击`View`Tab,即可看到网络请求
+
+> 优化：为了方便项目启动调试可以在package.json中添加一个命令
+>
+>
+> ```json
+> {
+>   "scripts": {
+>     "dev:httptoolkit-win": "powershell -NoProfile -Command \"Invoke-Expression (Invoke-WebRequest http://127.0.0.1:8001/ps-setup -UseBasicParsing).Content; pnpm exec electron-vite dev\"",
+>   }
+> }
+> ```
+>
+>后续可直接在项目中执行`pnpm run dev:httptoolkit-win`
+
 ## electron与node对应版本
 
 访问 <https://releases.electronjs.org/releases.json> 查看对应关系
