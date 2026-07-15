@@ -15,13 +15,14 @@ jobs:
     steps:
       # 拉取代码
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      - uses: pnpm/action-setup@v2
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9
           # 使用 pnpm 安装依赖
           run_install: true
 
@@ -29,7 +30,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           # 选择要使用的 node 版本
-          node-version: 20
+          node-version: 24
           # 缓存 pnpm 依赖
           cache: pnpm
 
