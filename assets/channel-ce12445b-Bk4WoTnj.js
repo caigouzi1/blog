@@ -1,0 +1,1 @@
+import{Lt as e,g as t}from"./mermaid-500b880f-DqnyLOIa.js";var n=(n,r)=>t.lang.round(e.parse(n)[r]);export{n as t};
