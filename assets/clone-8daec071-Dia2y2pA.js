@@ -1,0 +1,1 @@
+import{l as e}from"./graph-76cbc52e-cjp3DthS.js";var t=4;function n(n){return e(n,t)}export{n as t};

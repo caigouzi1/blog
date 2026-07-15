@@ -1,1 +1,0 @@
-import{l as e}from"./graph-76cbc52e-DYDu6o-F.js";var t=4;function n(n){return e(n,t)}export{n as t};
